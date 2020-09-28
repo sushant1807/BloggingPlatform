@@ -1,6 +1,7 @@
-package com.sushant.android.data.model
+package com.sushant.android.data.authors.model
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class Author(
    /* override val id: Int,
@@ -19,5 +20,5 @@ data class Author(
         @SerializedName("avatarUrl")
         var avatarUrl: String? = null
 
-)
+) : Serializable
 //: RecyclerItem

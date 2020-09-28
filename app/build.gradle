@@ -54,6 +54,8 @@ dependencies {
     implementation "com.squareup.okhttp3:okhttp:${rootProject.ext.okhttp3_version}"
 
     implementation "com.google.dagger:dagger:${rootProject.ext.dagger2_vesion}"
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
     kapt "com.google.dagger:dagger-compiler:${rootProject.ext.dagger2_vesion}"
 
     implementation "com.google.code.gson:gson:${rootProject.ext.gson_version}"
@@ -72,4 +74,5 @@ dependencies {
     androidTestImplementation "androidx.test:runner:${rootProject.ext.test_runner_version}"
     androidTestImplementation "androidx.test.espresso:espresso-core:${rootProject.ext.espresso_version}"
     implementation project(path: ':mvp')
+    implementation 'androidx.cardview:cardview:1.0.0'
 }

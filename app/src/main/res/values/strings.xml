@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Blogging Platform</string>
+    <string name="title_name">Title</string>
+    <string name="description_name">Description</string>
+    <string name="date_name">Date</string>
+    <string name="image_name">Image</string>
 </resources>

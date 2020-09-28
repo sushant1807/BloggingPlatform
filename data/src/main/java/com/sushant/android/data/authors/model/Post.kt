@@ -1,6 +1,7 @@
 package com.sushant.android.data.authors.model
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class Post(
 
@@ -16,4 +17,4 @@ data class Post(
     var imageUrl: String? = null,
     @SerializedName("authorId")
     var authorId: Int? = null,
-)
+) : Serializable

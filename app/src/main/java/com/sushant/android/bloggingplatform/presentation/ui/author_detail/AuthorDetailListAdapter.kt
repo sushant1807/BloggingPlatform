@@ -7,8 +7,10 @@ import android.view.ViewGroup
 import com.squareup.picasso.Picasso
 import com.sushant.android.bloggingplatform.R
 import com.sushant.android.data.authors.model.Post
-import com.sushant.android.data.model.Author
 import kotlinx.android.synthetic.main.list_item_author.view.*
+import java.text.ParseException
+import java.text.SimpleDateFormat
+import java.util.*
 
 
 class AuthorsListAdapter(private val context: Context, private val posts: List<Post>, var clickListner: OnItemClickListner) :
@@ -24,8 +26,19 @@ class AuthorsListAdapter(private val context: Context, private val posts: List<P
   }
 
   override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+
+    val sdf = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", Locale.ENGLISH)
+    var convertedDate: Date? = null
+    var formattedDate: String? = null
+    try {
+      convertedDate = sdf.parse(posts[position].date)
+      formattedDate = SimpleDateFormat("dd MMM yyyy", Locale.ENGLISH).format(convertedDate)
+    } catch (e: ParseException) {
+      e.printStackTrace()
+    }
+
     holder.view.user_name_text.setText(posts[position].title)
-    holder.view.email_text.setText(posts[position].date)
+    holder.view.email_text.setText(formattedDate)
 
     Picasso.get()
             .load(posts[position].imageUrl)

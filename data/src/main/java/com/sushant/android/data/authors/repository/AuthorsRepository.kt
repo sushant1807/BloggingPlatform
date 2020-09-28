@@ -2,7 +2,7 @@ package com.sushant.android.data.repository
 
 import com.sushant.android.data.authors.model.Post
 import com.sushant.android.data.ApiService
-import com.sushant.android.data.model.Author
+import com.sushant.android.data.authors.model.Author
 import io.reactivex.Single
 import javax.inject.Inject
 

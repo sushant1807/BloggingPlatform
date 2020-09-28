@@ -1,7 +1,7 @@
 package com.sushant.android.data
 
 import com.sushant.android.data.authors.model.Post
-import com.sushant.android.data.model.Author
+import com.sushant.android.data.authors.model.Author
 import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.Query

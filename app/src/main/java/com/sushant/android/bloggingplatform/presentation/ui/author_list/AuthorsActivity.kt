@@ -1,9 +1,8 @@
 package com.sushant.android.bloggingplatform.presentation.ui.author_list
 
 import android.content.Intent
-import android.widget.Toast
 import com.sushant.android.bloggingplatform.R
-import com.sushant.android.data.model.Author
+import com.sushant.android.data.authors.model.Author
 import com.sushant.android.mvp.CleanActivity
 import com.sushant.android.bloggingplatform.App
 import com.sushant.android.bloggingplatform.presentation.component.DaggerAuthorsComponent
@@ -32,9 +31,8 @@ class AuthorsActivity : CleanActivity<AuthorsPresenter>(), AuthorsView, OnItemCl
   }
 
   override fun onItemClick(item: Author, position: Int) {
-    val message = item.name
-    Toast.makeText(this, "Clicked on : $message" , Toast.LENGTH_LONG).show()
     val intent = Intent(this, AuthorDetailActivity::class.java)
+    intent.putExtra("AUTHOR", item)
     startActivity(intent)
 
   }

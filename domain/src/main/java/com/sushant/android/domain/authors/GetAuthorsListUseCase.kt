@@ -1,6 +1,6 @@
 package com.sushant.android.domain.authors
 
-import com.sushant.android.data.model.Author
+import com.sushant.android.data.authors.model.Author
 import com.sushant.android.data.repository.AuthorsRepository
 import com.sushant.android.domain.UseCase
 import io.reactivex.Scheduler
