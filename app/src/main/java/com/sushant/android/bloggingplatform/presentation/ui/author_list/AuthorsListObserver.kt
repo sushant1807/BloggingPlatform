@@ -1,4 +1,4 @@
-package com.sushant.android.bloggingplatform.authors
+package com.sushant.android.bloggingplatform.presentation.ui.author_list
 
 import com.sushant.android.data.model.Author
 import io.reactivex.observers.DisposableSingleObserver

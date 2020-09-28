@@ -5,10 +5,11 @@ import com.sushant.android.bloggingplatform.di.module.AppModule
 import com.sushant.android.bloggingplatform.di.module.IOModule
 import com.sushant.android.bloggingplatform.di.module.RepositoryModule
 import com.sushant.android.bloggingplatform.di.module.UseCaseModule
-import com.sushant.android.data.data.Endpoint
+import com.sushant.android.data.ApiService
 import com.sushant.android.domain.authors.GetAuthorsListUseCase
 import dagger.Component
 import com.sushant.android.bloggingplatform.App
+import com.sushant.android.domain.authors.GetAuthorsPostsUseCase
 import javax.inject.Singleton
 
 @Singleton
@@ -16,7 +17,9 @@ import javax.inject.Singleton
 interface AppComponent {
   fun inject(app: App)
   fun getApplicationContext(): Context
-  fun getEndpoint(): Endpoint
+  fun getEndpoint(): ApiService
 
   fun getAuthorListUseCase(): GetAuthorsListUseCase
+
+  fun getPostsUseCase(): GetAuthorsPostsUseCase
 }

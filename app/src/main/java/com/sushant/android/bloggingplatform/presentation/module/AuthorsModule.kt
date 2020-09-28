@@ -1,6 +1,6 @@
-package com.sushant.android.bloggingplatform.authors.di.module
+package com.sushant.android.bloggingplatform.presentation.module
 
-import com.sushant.android.bloggingplatform.authors.AuthorsPresenter
+import com.sushant.android.bloggingplatform.presentation.ui.author_list.AuthorsPresenter
 import dagger.Module
 import dagger.Provides
 import com.sushant.android.domain.authors.GetAuthorsListUseCase

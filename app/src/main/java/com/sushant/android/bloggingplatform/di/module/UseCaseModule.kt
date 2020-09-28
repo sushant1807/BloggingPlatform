@@ -2,6 +2,7 @@ package com.sushant.android.bloggingplatform.di.module
 
 import com.sushant.android.data.repository.AuthorsRepository
 import com.sushant.android.domain.authors.GetAuthorsListUseCase
+import com.sushant.android.domain.authors.GetAuthorsPostsUseCase
 import dagger.Module
 import dagger.Provides
 import io.reactivex.Scheduler
@@ -29,4 +30,12 @@ class UseCaseModule {
                                             @Named("mainThreadScheduler")
                                               mainThreadScheduler: Scheduler):
           GetAuthorsListUseCase = GetAuthorsListUseCase(authorsRepository, ioScheduler, mainThreadScheduler)
+
+  @Provides
+  @Singleton
+  internal fun provideGetPostsListUseCase(authorsRepository: AuthorsRepository,
+                                            @Named("ioScheduler") ioScheduler: Scheduler,
+                                            @Named("mainThreadScheduler")
+                                            mainThreadScheduler: Scheduler):
+          GetAuthorsPostsUseCase = GetAuthorsPostsUseCase(authorsRepository, ioScheduler, mainThreadScheduler)
 }

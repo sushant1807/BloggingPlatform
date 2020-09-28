@@ -1,17 +1,17 @@
-package com.sushant.android.bloggingplatform.authors
+package com.sushant.android.bloggingplatform.presentation.ui.author_detail
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import com.squareup.picasso.Picasso
 import com.sushant.android.bloggingplatform.R
+import com.sushant.android.data.authors.model.Post
 import com.sushant.android.data.model.Author
 import kotlinx.android.synthetic.main.list_item_author.view.*
 
 
-class AuthorsListAdapter(private val context: Context, private val authors: List<Author>, var clickListner: OnItemClickListner) :
+class AuthorsListAdapter(private val context: Context, private val posts: List<Post>, var clickListner: OnItemClickListner) :
   androidx.recyclerview.widget.RecyclerView.Adapter<AuthorsListAdapter.ViewHolder>() {
 
   class ViewHolder(val view: View ) : androidx.recyclerview.widget.RecyclerView.ViewHolder(view)
@@ -24,11 +24,11 @@ class AuthorsListAdapter(private val context: Context, private val authors: List
   }
 
   override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-    holder.view.user_name_text.setText(authors[position].name)
-    holder.view.email_text.setText(authors[position].email)
+    holder.view.user_name_text.setText(posts[position].title)
+    holder.view.email_text.setText(posts[position].date)
 
     Picasso.get()
-            .load(authors[position].avatarUrl)
+            .load(posts[position].imageUrl)
             .apply {
               fit()
               centerCrop()
@@ -37,15 +37,15 @@ class AuthorsListAdapter(private val context: Context, private val authors: List
             }
 
     holder.view.setOnClickListener {
-      clickListner.onItemClick(authors[position], position)
+      clickListner.onItemClick(posts[position], position)
 
     }
   }
 
-  override fun getItemCount() = authors.size
+  override fun getItemCount() = posts.size
 
 }
 
 interface OnItemClickListner{
-  fun onItemClick(item: Author, position: Int)
+  fun onItemClick(item: Post, position: Int)
 }

@@ -12,13 +12,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".authors.AuthorsActivity">
+        <activity android:name="com.sushant.android.bloggingplatform.presentation.ui.author_list.AuthorsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".presentation.ui.author_detail.AuthorDetailActivity" />
     </application>
 
 </manifest>

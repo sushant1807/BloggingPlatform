@@ -1,6 +1,6 @@
 package com.sushant.android.bloggingplatform.di.module
 
-import com.sushant.android.data.data.Endpoint
+import com.sushant.android.data.ApiService
 import com.sushant.android.data.repository.AuthorsRepository
 import dagger.Module
 import dagger.Provides
@@ -10,5 +10,5 @@ import javax.inject.Singleton
 class RepositoryModule {
   @Provides
   @Singleton
-  internal fun provideAuthorRepository(endpoint: Endpoint): AuthorsRepository = AuthorsRepository(endpoint)
+  internal fun provideAuthorRepository(apiService: ApiService): AuthorsRepository = AuthorsRepository(apiService)
 }
