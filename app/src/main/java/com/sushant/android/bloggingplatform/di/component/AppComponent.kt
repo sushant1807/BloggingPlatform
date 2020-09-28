@@ -18,5 +18,5 @@ interface AppComponent {
   fun getApplicationContext(): Context
   fun getEndpoint(): Endpoint
 
-  fun getArticlesListUseCase(): GetAuthorsListUseCase
+  fun getAuthorListUseCase(): GetAuthorsListUseCase
 }

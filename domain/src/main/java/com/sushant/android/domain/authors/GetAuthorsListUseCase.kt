@@ -11,5 +11,5 @@ class GetAuthorsListUseCase @Inject constructor(private val authorsRepository: A
                                                 subscribeScheduler: Scheduler,
                                                 postExecutionScheduler: Scheduler) : UseCase<List<Author>, Unit>(subscribeScheduler, postExecutionScheduler) {
 
-  override fun buildUseCaseSingle(params: Unit?): Single<List<Author>> = authorsRepository.articles()
+  override fun buildUseCaseSingle(params: Unit?): Single<List<Author>> = authorsRepository.authors()
 }

@@ -16,7 +16,7 @@ class AuthorsPresenter @Inject constructor(private val getAuthorsListUseCase: Ge
     getAuthorsListUseCase.dispose()
   }
 
-  fun showArticleList(articlesList: List<Author>) {
-    getView()?.showArticleList(articlesList)
+  fun showAuthorList(authorsList: List<Author>) {
+    getView()?.showAuthorList(authorsList)
   }
 }

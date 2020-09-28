@@ -4,5 +4,5 @@ import com.sushant.android.data.model.Author
 
 interface AuthorsView {
   fun initialiseView()
-  fun showArticleList(articles: List<Author>)
+  fun showAuthorList(authors: List<Author>)
 }

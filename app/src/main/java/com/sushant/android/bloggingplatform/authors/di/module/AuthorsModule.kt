@@ -10,5 +10,5 @@ import com.sushant.android.mvp.scope.PerActivity
 class AuthorsModule {
   @PerActivity
   @Provides
-  internal fun provideArticlesPresenter(getAuthorsListUseCase: GetAuthorsListUseCase) = AuthorsPresenter(getAuthorsListUseCase)
+  internal fun provideAuthorsPresenter(getAuthorsListUseCase: GetAuthorsListUseCase) = AuthorsPresenter(getAuthorsListUseCase)
 }

@@ -10,5 +10,5 @@ import javax.inject.Singleton
 class RepositoryModule {
   @Provides
   @Singleton
-  internal fun provideArticleRepository(endpoint: Endpoint): AuthorsRepository = AuthorsRepository(endpoint)
+  internal fun provideAuthorRepository(endpoint: Endpoint): AuthorsRepository = AuthorsRepository(endpoint)
 }

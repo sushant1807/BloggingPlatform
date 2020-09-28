@@ -6,5 +6,5 @@ import io.reactivex.Single
 import javax.inject.Inject
 
 class AuthorsRepository @Inject constructor(private val endpoint: Endpoint) {
-  fun articles(): Single<List<Author>> = endpoint.getAuthorsList()
+  fun authors(): Single<List<Author>> = endpoint.getAuthorsList()
 }
